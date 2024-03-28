@@ -14,7 +14,7 @@ app.use(cors())
 app.use(bodyParser())
 
 const store=mongodbSession({
-    uri:mongoURI,
+    uri:process.env.MONGODB_URI,
     collection:"session"
 })
 
