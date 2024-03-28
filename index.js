@@ -12,7 +12,7 @@ const mongoURI="mongodb://127.0.0.1:27017/infra_pricing"
 
 // CORS options
 const corsOptions = {
-    origin: 'https://infra-pricing-tool-client.vercel.app/',
+    origin: 'https://infra-pricing-tool-client.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Add any other methods you wish to allow
     allowedHeaders: ['Content-Type', 'Authorization'] // You can customize this according to the headers you need
   };
