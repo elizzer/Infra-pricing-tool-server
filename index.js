@@ -10,7 +10,7 @@ require('dotenv').config();
 
 const mongoURI="mongodb://127.0.0.1:27017/infra_pricing"
 
-app.use(cors())
+app.use(cors({ origin: 'https://infra-pricing-tool-client.vercel.app/' }));
 app.use(bodyParser())
 
 const store=mongodbSession({
