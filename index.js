@@ -46,7 +46,7 @@ app.use('/aws',awsRoutes)
 
 app.listen(5000,()=>{
     console.log('[+]Server is up and running on port 5000')
-    mongoose.connect(mongoURI).then(()=>{
+    mongoose.connect(process.env.MONGODB_URI).then(()=>{
         console.log('[+]DB connected')
     }).catch((e)=>{
         console.log('[+]Error in connecting to db',e)
