@@ -10,7 +10,16 @@ require('dotenv').config();
 
 const mongoURI="mongodb://127.0.0.1:27017/infra_pricing"
 
-app.use(cors({ origin: 'https://infra-pricing-tool-client.vercel.app/' }));
+// CORS options
+const corsOptions = {
+    origin: 'https://infra-pricing-tool-client.vercel.app/',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Add any other methods you wish to allow
+    allowedHeaders: ['Content-Type', 'Authorization'] // You can customize this according to the headers you need
+  };
+  
+  // Use cors with the above options
+app.use(cors(corsOptions));
+
 app.use(bodyParser())
 
 const store=mongodbSession({
