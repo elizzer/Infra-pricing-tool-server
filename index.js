@@ -49,6 +49,6 @@ app.listen(5000,()=>{
     mongoose.connect(process.env.MONGODB_URI).then(()=>{
         console.log('[+]DB connected')
     }).catch((e)=>{
-        console.log('[+]Error in connecting to db',e)
+        console.log('[+]Error in connecting to db')
     })
 })
